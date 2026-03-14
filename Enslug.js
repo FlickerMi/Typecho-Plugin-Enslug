@@ -276,8 +276,18 @@ $(function () {
     "background-color": "#FFCFC3",
   });
 
+  // 记录初始标题，用于后续对比
+  var lastTitle = $("#title").val();
+
   $("#title").on("blur", function () {
     var title = $("#title").val();
+    // 若标题未发生变化，则不触发翻译请求，避免频繁弹窗
+    if (title === lastTitle) {
+      return;
+    }
+    // 更新记录的标题
+    lastTitle = title;
+
     if (title) {
       var str1 = appid + title + salt + key;
       var sign = MD5(str1);

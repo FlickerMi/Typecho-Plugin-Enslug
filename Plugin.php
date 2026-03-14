@@ -4,12 +4,13 @@
  * 
  * @package Enslug
  * @author happmaoo
- * @version 1.1.2
+ * @version 1.1.3
  * @link http://blog.codeinto.com/
  *
  * 1.1.0 增加编辑文章时单词释义可能出现更新的确认框。
  * 1.1.1 更新百度翻译api，添加api接入输入框。
  * 1.1.2 修复https下无效的问题。
+ * 1.1.3 修复未修改标题时失去焦点重复触发翻译弹窗的问题。
  */
 class Enslug_Plugin implements Typecho_Plugin_Interface
 {
